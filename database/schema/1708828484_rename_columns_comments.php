@@ -14,19 +14,19 @@ return new class implements Migration
     public function up()
     {
         Schema::table('comments', function (Table $table) {
-            if ($table->checkColumn('nama')) {
+            if ($table->checkColumn('name')) {
                 $table->renameColumn('nama', 'name');
             }
         });
 
         Schema::table('comments', function (Table $table) {
-            if ($table->checkColumn('hadir')) {
+            if ($table->checkColumn('presence')) {
                 $table->renameColumn('hadir', 'presence');
             }
         });
 
         Schema::table('comments', function (Table $table) {
-            if ($table->checkColumn('komentar')) {
+            if ($table->checkColumn('comment')) {
                 $table->renameColumn('komentar', 'comment');
             }
         });
