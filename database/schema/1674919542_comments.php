@@ -18,9 +18,9 @@ return new class implements Migration
 
             $table->integer('user_id');
 
-            $table->string('nama');
-            $table->boolean('hadir')->default(false);
-            $table->text('komentar')->nullable();
+            $table->string('name');
+            $table->boolean('presence')->default(false);
+            $table->text('comment')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
 
