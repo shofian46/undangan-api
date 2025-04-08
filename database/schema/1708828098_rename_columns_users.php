@@ -15,7 +15,7 @@ return new class implements Migration
     {
         Schema::table('users', function (Table $table) {
             if ($table->checkColumn('name')) {
-                $table->renameColumn('nama', 'name');
+                $table->renameColumn('name', 'name');
             }
         });
     }
@@ -28,8 +28,8 @@ return new class implements Migration
     public function down()
     {
         Schema::table('users', function (Table $table) {
-            if ($table->checkColumn('nama')) {
-                $table->renameColumn('name', 'nama');
+            if ($table->checkColumn('name')) {
+                $table->renameColumn('name', 'name');
             }
         });
     }

@@ -15,7 +15,7 @@ return new class implements Migration
     {
         Schema::table('comments', function (Table $table) {
             if ($table->checkColumn('name')) {
-                $table->renameColumn('nama', 'name');
+                $table->renameColumn('name', 'name');
             }
         });
 
@@ -41,7 +41,7 @@ return new class implements Migration
     {
         Schema::table('comments', function (Table $table) {
             if ($table->checkColumn('name')) {
-                $table->renameColumn('name', 'nama');
+                $table->renameColumn('name', 'name');
             }
         });
 
